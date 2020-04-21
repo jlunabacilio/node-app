@@ -1,4 +1,4 @@
-# Instructions
+# Steps
 1. mkdir docker-test
 2. cd docker-test
 3. docker build -t node-app .
