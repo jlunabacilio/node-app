@@ -8,18 +8,10 @@ pipeline {
         }
         stage('Building new image'){
             steps{
+                git branch 'master',
+                url: 'https://github.com/lunabacilio/node-app.git'
                 sh 'docker build -t node-app .'
             }
         }
-        stage('Running container'){
-            steps{
-                sh 'docker run --name=my-app -d -p 8000:8000 node-app'
-            }
-        }
-        stage('Watching all images'){
-            steps{
-                sh 'docker images'
-            }
-        }
     }
-}
+}   
