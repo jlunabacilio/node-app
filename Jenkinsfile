@@ -6,10 +6,13 @@ pipeline {
                 sh 'node --version'
             }
         }
+        stage('Cloning files'){
+            steps{
+                sh 'git clone https://github.com/lunabacilio/node-app.git'
+            }
+        }
         stage('Building new image'){
             steps{
-                git branch 'master',
-                url: 'https://github.com/lunabacilio/node-app.git'
                 sh 'docker build -t node-app .'
             }
         }
