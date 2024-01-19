@@ -1,4 +1,4 @@
-# Steps c:
+# Steps
 
 
 1. docker build -t node-app .
