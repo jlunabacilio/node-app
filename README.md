@@ -1,4 +1,4 @@
-# Steps.lslslssss
+# Steps.lsl
 
 
 1. docker build -t node-app .
